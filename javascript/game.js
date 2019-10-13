@@ -24,11 +24,11 @@ let crystalbutton2 = $("#yellow");
 let crystalbutton3 = $("#blue");
 let crystalbutton4 = $("#green");
 
-// For debuggin
-console.log("Red: " + crystal1);
-console.log("Yellow: " + crystal2);
-console.log("Blue: " + crystal3);
-console.log("Green: " + crystal4);
+// For debugging
+// console.log("Red: " + crystal1);
+// console.log("Yellow: " + crystal2);
+// console.log("Blue: " + crystal3);
+// console.log("Green: " + crystal4);
 
 // Setting up counters
 $("#winnumber").html(goalnumber);
