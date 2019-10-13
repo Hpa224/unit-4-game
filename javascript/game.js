@@ -12,7 +12,7 @@ let crystal1= randomnumbers(1,12);
 let crystal2 = randomnumbers (1,12);
 let crystal3 = randomnumbers (1,12);
 let crystal4 = randomnumbers (1,12);
-let totalscore = 0; 
+let totalscore = 0;
 let wins = 0;
 let losses = 0;
 let gamestatus = true;
@@ -25,10 +25,10 @@ let crystalbutton3 = $("#blue");
 let crystalbutton4 = $("#green");
 
 // For debuggin
-// console.log("Red: " + crystal1);
-// console.log("Yellow: " + crystal2);
-// console.log("Blue: " + crystal3);
-// console.log("Green: " + crystal4);
+console.log("Red: " + crystal1);
+console.log("Yellow: " + crystal2);
+console.log("Blue: " + crystal3);
+console.log("Green: " + crystal4);
 
 // Setting up counters
 $("#winnumber").html(goalnumber);
@@ -46,6 +46,7 @@ function win () {
     $("#winsnum").text("Wins: " + wins);
     $("#otherdiv").html("<p>Use the pym particles to go back in time and go again.</p>");
     $("#otherdiv").append("<img id=pymparticles src=images/pym.png alt=pymparticles>") ;
+    $("#gif").html("<img id=losesnap src=images/winsnap.gif alt=snap>");
     $("#pymparticles").click(resetf);
     };
 };
@@ -59,6 +60,7 @@ function lose() {
     $("#lossesnum").html("Losses: " + losses);
     $("#otherdiv").html("<p>Use the pym particles to go back in time and try again.</p>");
     $("#otherdiv").append("<img id=pymparticles src=images/pym.png alt=pymparticles>") ;
+    $("#gif").html("<img id=losesnap src=images/losesnap.gif alt=snap>");
     $("#pymparticles").click(resetf);
     };
 };
@@ -73,11 +75,12 @@ function resetf() {
     totalscore = 0;
     gamestatus = true;
 
-    $("#otherdiv").html("");
     $("#otherdiv").html("") ;
     $("#winnumber").html(goalnumber);
     $("#score").text(totalscore);
     $("#winorlose").html("");
+    $("#gif").html("");
+
     };
 
 
